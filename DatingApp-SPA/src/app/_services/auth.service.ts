@@ -11,6 +11,8 @@ export class AuthService {
   baseUrl = environment.apiUrl + 'auth/';
   jwtHelper = new JwtHelperService();
   decodedToken: any;
+  name: any;
+  identifier: any;
 constructor(private http: HttpClient) {}
 
 login(model: any) {
@@ -22,6 +24,7 @@ login(model: any) {
         localStorage.setItem('token', user.token);
         this.decodedToken = this.jwtHelper.decodeToken(user.token);
         console.log(this.decodedToken);
+
       }
     })
   );
