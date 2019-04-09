@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DatingApp.API.Dtos
 {
-    public class userForRegisterDto
+    public class UserForRegisterDto
     {
 
         [Required]
@@ -24,7 +24,7 @@ namespace DatingApp.API.Dtos
         public string Country { get; set; }
         public DateTime Created { get; set; }
         public DateTime LastActive { get; set; }
-        public userForRegisterDto()
+        public UserForRegisterDto()
         {
             Created = DateTime.Now;
             LastActive = DateTime.Now;
